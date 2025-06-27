@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Poorna Tattva Play Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles3.css" />
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+    }
+    section {
+      padding: 100px 0;
+    }
+    section:nth-child(even) {
+      background-color: #f9f6f1;
+    }
+    .hero {
+      height: 100vh;
+      background: url('https://source.unsplash.com/1600x900/?kids,nature') center/cover no-repeat;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+        position: relative;
+  overflow: hidden;
+      text-align: center;
+    }
+    .video-container {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: 0;
+}
+
+.bg-video {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: opacity 1s ease-in-out;
+  opacity: 0;
+    z-index: 0;
+}
+.background-video {
+  z-index: 0;
+}
+
+.video-overlay {
+  background: rgba(0, 0, 0, 0.4); /* Adjust as needed for contrast */
+  z-index: 1;
+}
+    .hero-overlay {
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0.7) 20%,
+    rgba(0, 0, 0, 0.6) 40%,
+    rgba(0, 0, 0, 0.5) 60%,
+    rgba(0, 0, 0, 0.4) 80%,
+    rgba(0, 0, 0, 0.3) 90%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  padding: 2rem;
+  z-index: 1;
+}
+    .icon {
+      font-size: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">🌿 Poorna Tattva</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="#philosophy">Philosophy</a></li>
+          <li class="nav-item"><a class="nav-link" href="#why">Why Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="#day">A Day</a></li>
+          <li class="nav-item"><a class="nav-link" href="#spaces">Spaces</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Join</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+     <div class="video-container">
+    <video class="bg-video" autoplay muted loop playsinline></video>
+    <video class="bg-video" autoplay muted loop playsinline></video>
+  </div>
+    <div class="hero-overlay">
+      <h1 class="display-3 fw-bold">🌿 Poorna Tattva</h1>
+      <p class="lead">Where the Five Elements Meet the First Lessons of Life</p>
+      <p>A space where the soul of childhood is nurtured through wonder, wisdom, and the whispers of nature.</p>
+      <a href="#philosophy" class="btn btn-outline-light btn-lg m-2">Explore Our Philosophy</a>
+      <a href="#contact" class="btn btn-light btn-lg m-2">Visit Our Space</a>
+    </div>
+  </section>
+
+  <!-- About Us -->
+  <!-- <section id="about">
+    <div class="container text-center">
+      <h2 class="mb-4">Welcome to Poorna Tattva</h2>
+      <p class="lead mx-auto" style="max-width: 800px;">
+        In the quiet rhythms of the earth and the laughter of little feet, there lies a space where learning is not rushed, but realized. At Poorna Tattva Play Home, education is life itself—unfolding gracefully like the petals of a lotus. Childhood here is not a phase to hurry, but a time to build a foundation deeply, joyfully, and meaningfully.
+      </p>
+    </div>
+  </section> -->
+  <section id="about" style="position: relative; overflow: hidden;">
+  <!-- Background video -->
+  <video autoplay muted loop playsinline style="position: absolute; top: 50%; left: 50%; min-width: 100%; min-height: 100%; width: auto; height: auto; z-index: -1; transform: translate(-50%, -50%); object-fit: cover;">
+    <source src="nature3.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Blurred text container -->
+  <div class="container text-center" style="position: relative; z-index: 1; background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0.7) 20%,
+    rgba(0, 0, 0, 0.6) 40%,
+    rgba(0, 0, 0, 0.5) 60%,
+    rgba(0, 0, 0, 0.4) 80%,
+    rgba(0, 0, 0, 0.3) 90%,
+    rgba(0, 0, 0, 0) 100%
+  ); padding: 2rem; border-radius: 1rem;">
+    <h2 class="mb-4 text-white">Welcome to Poorna Tattva</h2>
+    <p class="lead mx-auto text-white" style="max-width: 800px;">
+      In the quiet rhythms of the earth and the laughter of little feet, there lies a space where learning is not rushed, but realized. At Poorna Tattva Play Home, education is life itself—unfolding gracefully like the petals of a lotus. Childhood here is not a phase to hurry, but a time to build a foundation deeply, joyfully, and meaningfully.
+    </p>
+  </div>
+</section>
+
+  <!-- Our Philosophy -->
+  <section id="philosophy">
+    <div class="container">
+      <h2 class="text-center mb-5">Our Roots: Indian Philosophy. Our Wings: Innovation.</h2>
+      <div class="row g-4 text-center">
+      
+         <div class="col-md-4 position-relative overflow-hidden">
+  <!-- Background Video -->
+  <video class="background-video position-absolute top-0 start-0 w-100 h-100 object-fit-cover" autoplay muted loop playsinline>
+    <source src="earth.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Optional overlay for readability -->
+  <div class="video-overlay position-absolute top-0 start-0 w-100 h-100"></div>
+
+  <div class="position-relative z-1 p-3"> <!-- Content wrapper to keep text above video -->
+    <div class="icon">🌍</div>
+    <h5 class="text-white">Prithvi (Earth)</h5>
+    <p class="text-white">Soil play, gardening, barefoot walks—where stability and sensory richness begin.</p>
+  </div>
+</div>
+        <div class="col-md-4 position-relative overflow-hidden">
+  <!-- Background Video -->
+  <video class="background-video position-absolute top-0 start-0 w-100 h-100 object-fit-cover" autoplay muted loop playsinline>
+    <source src="water.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Optional overlay for readability -->
+  <div class="video-overlay position-absolute top-0 start-0 w-100 h-100"></div>
+
+  <div class="position-relative z-1 p-3"> <!-- Content wrapper to keep text above video -->
+    <div class="icon">💧</div>
+    <h5 class="text-white">Apas (Water)</h5>
+    <p class="text-white">Fluid movement, water play—where emotions are explored with grace.</p>
+  </div>
+</div>
+<div class="col-md-4 position-relative overflow-hidden">
+  <!-- Background Video -->
+  <video class="background-video position-absolute top-0 start-0 w-100 h-100 object-fit-cover" autoplay muted loop playsinline>
+    <source src="fire.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Optional overlay for readability -->
+  <div class="video-overlay position-absolute top-0 start-0 w-100 h-100"></div>
+
+  <div class="position-relative z-1 p-3"> <!-- Content wrapper to keep text above video -->
+    <div class="icon">🔥</div>
+    <h5 class="text-white">Agni (Fire)</h5>
+    <p class="text-white">Storytelling, celebrations—where transformation and passion ignite</p>
+  </div>
+</div>
+        <!-- <div class="col-md-4">
+          <div class="icon">💧</div>
+          <h5>Apas (Water)</h5>
+          <p>Fluid movement, water play—where emotions are explored with grace.</p>
+        </div> -->
+        <div class ="col-md-2 position-relative overflow-hidden ">
+    
+</div>
+<div class="col-md-4 position-relative overflow-hidden">
+  <!-- Background Video -->
+  <video class="background-video position-absolute top-0 start-0 w-100 h-100 object-fit-cover" autoplay muted loop playsinline>
+    <source src="air.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Optional overlay for readability -->
+  <div class="video-overlay position-absolute top-0 start-0 w-100 h-100"></div>
+
+  <div class="position-relative z-1 p-3"> <!-- Content wrapper to keep text above video -->
+    <div class="icon">🌬️</div>
+    <h5 class="text-white">Vayu (Air)</h5>
+    <p class="text-white">Silence, reflection, imagination—where wonder and self-awareness are born.</p>
+  </div>
+</div>
+<div class ="col-md-1 position-relative overflow-hidden ">
+    
+</div>
+<div class="col-md-4 position-relative overflow-hidden">
+  <!-- Background Video -->
+  <video class="background-video position-absolute top-0 start-0 w-100 h-100 object-fit-cover" autoplay muted loop playsinline>
+    <source src="space.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Optional overlay for readability -->
+  <div class="video-overlay position-absolute top-0 start-0 w-100 h-100"></div>
+
+  <div class="position-relative z-1 p-3"> <!-- Content wrapper to keep text above video -->
+    <div class="icon">🌌</div>
+    <h5 class="text-white">Akasha (Space)</h5>
+    <p class="text-white">Silence, reflection, imagination—where wonder and self-awareness are born.</p>
+  </div>
+  
+</div>
+<div class ="col-md-1 position-relative overflow-hidden ">
+    
+</div>
+        
+    
+      <p class="lead text-center mt-4">These elements are life to be lived—our natural curriculum.</p>
+    </div>
+  </section>
+
+  <!-- Why Poorna Tattva -->
+  <section id="why">
+    <div class="container text-center">
+      <h2 class="mb-4">Why Poorna Tattva?</h2>
+      <ul class="list-unstyled lead mx-auto" style="max-width: 800px; text-align: left;">
+        <li>• We don’t see children as vessels to be filled, but flames to be kindled.</li>
+        <li>• At Poorna Tattva, ‘play’ is not a break from learning—it is the learning.</li>
+        <li>• True education flows through the heart, hands, and spirit—not just the mind.</li>
+        <li>• Our spaces are alive—with nature, creativity, and meaning.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- A Day at Poorna Tattva -->
+  <section id="day">
+    <div class="container text-center">
+      <h2 class="mb-4">A Day at Poorna Tattva</h2>
+      <ul class="list-unstyled lead mx-auto" style="max-width: 800px; text-align: left;">
+        <li>🧘 Sorting pebbles under a banyan tree to learn counting.</li>
+        <li>🦋 Observing a butterfly emerge to spark a science story.</li>
+        <li>🎭 Re-enacting village tales to understand history and community.</li>
+        <li>🎵 Singing folk songs and talking to elders to build language.</li>
+      </ul>
+      <p class="mt-4">Every moment blends play, observation, art, and inquiry.</p>
+    </div>
+  </section>
+
+  <!-- Spaces of Wonder -->
+  <section id="spaces">
+    <div class="container text-center">
+      <h2 class="mb-4">Spaces of Wonder</h2>
+      <div class="row g-4">
+        <div class="col-md-4"><h5>Reading Grove</h5><p>Storytime under the trees where books come alive with nature.</p></div>
+        <div class="col-md-4"><h5>Art Studio</h5><p>Open skies, natural colours, and endless possibilities.</p></div>
+        <div class="col-md-4"><h5>Mud Kitchen</h5><p>Sensory-rich pretend play with clay, seeds, and stones.</p></div>
+        <div class="col-md-4"><h5>Reflection Hut</h5><p>A quiet space to simply be, breathe, and wonder.</p></div>
+        <div class="col-md-4"><h5>Circle of Stories</h5><p>Where the past and present dance in dialogue.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact / Join the Journey -->
+  <section id="contact">
+    <div class="container text-center">
+      <h2 class="mb-4">Join the Journey</h2>
+      <p class="lead mx-auto" style="max-width: 800px;">
+        We invite parents who seek a holistic path, educators who want to teach from love, and communities who believe in childhood's power to heal and transform.
+      </p>
+      <p class="mt-4">📍 <strong>Visit Us:</strong> Experience the space where imagination meets intention.</p>
+      <p>📧 <a href="mailto:hello@poornatattva.org">hello@poornatattva.org</a> | 📞 +91 XXXXX XXXXX</p>
+      <p>📅 <strong>Admissions Open:</strong> Schedule a walkthrough today.</p>
+      <a href="#" class="btn btn-primary btn-lg m-2">Download Brochure</a>
+     
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-4">
+    <div class="container">
+      <p class="mb-1">&copy; 2025 Poorna Tattva. All rights reserved.</p>
+      <ul class="list-inline">
+        <li class="list-inline-item"><a href="#" class="text-white text-decoration-none">About</a></li>
+        <li class="list-inline-item"><a href="#" class="text-white text-decoration-none">Philosophy</a></li>
+        <li class="list-inline-item"><a href="#" class="text-white text-decoration-none">Team</a></li>
+        <li class="list-inline-item"><a href="#" class="text-white text-decoration-none">Community</a></li>
+        <li class="list-inline-item"><a href="#" class="text-white text-decoration-none">Blog</a></li>
+        <li class="list-inline-item"><a href="#" class="text-white text-decoration-none">FAQs</a></li>
+        <li class="list-inline-item"><a href="#" class="text-white text-decoration-none">Contact</a></li>
+      </ul>
+      <div class="mt-3">
+        <a href="#" class="text-white mx-2">Instagram</a>
+        <a href="#" class="text-white mx-2">Facebook</a>
+        <a href="#" class="text-white mx-2">YouTube</a>
+      </div>
+    </div>
+  </footer>
+<script src="script2.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
