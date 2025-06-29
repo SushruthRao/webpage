@@ -60,7 +60,66 @@
 .background-video {
   z-index: 0;
 }
+#philosophy {
+  position: relative; /* KEY: gives falling leaves a reference */
+  overflow: hidden;   /* optional: hide leaves outside the section */
+}
+.falling-leaves {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* So leaves don't interfere with clicks */
+  overflow: hidden;
+  z-index: 0; /* behind your text */
+}
 
+.leaf {
+  position: absolute;
+  top: -50px;
+  font-size: 2rem;
+  animation-name: fall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.leaf:nth-child(1) {
+  left: 10%;
+  animation-duration: 8s;
+  animation-delay: 0s;
+}
+.leaf:nth-child(2) {
+  left: 30%;
+  animation-duration: 10s;
+  animation-delay: 2s;
+}
+.leaf:nth-child(3) {
+  left: 50%;
+  animation-duration: 7s;
+  animation-delay: 1s;
+}
+.leaf:nth-child(4) {
+  left: 70%;
+  animation-duration: 9s;
+  animation-delay: 3s;
+}
+.leaf:nth-child(5) {
+  left: 90%;
+  animation-duration: 11s;
+  animation-delay: 0.5s;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
 .video-overlay {
   background: rgba(0, 0, 0, 0.4); /* Adjust as needed for contrast */
   z-index: 1;
@@ -162,9 +221,27 @@
     </p>
   </div>
 </section>
+ <section id="philosophy">
+    <div class="container text-center">
+      <h2 class="mb-4">Philosophy</h2>
+       <p class="lead mx-auto" style="max-width: 800px;">
+       At Poorna Tattva, we believe that the early years are sacred—where a child’s worldview begins to form. Guided by the timeless wisdom of Indian philosophy, we honor each child as a unique spark of potential, unfolding at their own rhythm. Inspired by principles such as Ahimsa (non-violence), Samskara (values), and Sahaj (naturalness), our learning environment is nurturing, mindful, and deeply respectful of the child’s innate nature.
 
+From these strong roots, we give our children wings to explore the world through creative play, storytelling, nature walks, music, and hands-on discovery. We blend ancient practices with modern pedagogical insights, creating a rich, stimulating space that fosters curiosity, confidence, and compassion.
+
+Here, education is not rushed or forced—it is lived, experienced, and celebrated.
+      </p>
+     <div class="falling-leaves">
+      <div class="leaf">🍃</div>
+      <div class="leaf">🍃</div>
+      <div class="leaf">🍃</div>
+      <div class="leaf">🍃</div>
+      <div class="leaf">🍃</div>
+    </div>
+    </div>
+  </section>
   <!-- Our Philosophy -->
-  <section id="philosophy">
+  <section id="philosophyy">
     <div class="container">
       <h2 class="text-center mb-5">Our Roots: Indian Philosophy. Our Wings: Innovation.</h2>
       <div class="row g-4 text-center">
@@ -297,6 +374,7 @@
     </div>
   </section>
 
+  
   <!-- Spaces of Wonder -->
   <section id="spaces">
     <div class="container text-center">
