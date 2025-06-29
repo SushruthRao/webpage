@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Poorna Tattva Play Home</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="styles3.css" />
@@ -10,12 +11,15 @@
     body {
       font-family: 'Georgia', serif;
     }
+
     section {
       padding: 100px 0;
     }
+
     section:nth-child(even) {
       background-color: #f9f6f1;
     }
+
     .hero {
       height: 100vh;
       background: url('https://source.unsplash.com/1600x900/?kids,nature') center/cover no-repeat;
@@ -23,130 +27,162 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      
-        position: relative;
-  overflow: hidden;
+
+      position: relative;
+      overflow: hidden;
       text-align: center;
     }
+
     .video-container {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  z-index: 0;
-}
-.navbar-brand {
-  display: inline-block;
-  width: 120px; /* set the desired width for the anchor */
-  height:70px; /* set the desired height for the anchor */
-  position: relative;
-  overflow: hidden; /* ensures the image doesn't spill outside */
-}
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
 
-.navbar-logo {
-  width: 110%;
-  height: 100%;
-  object-fit: contain; /* scale the image to fit inside while maintaining aspect ratio */
-  display: block;
-}
-.bg-video {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  object-fit: cover;
-  transition: opacity 1s ease-in-out;
-  opacity: 0;
-    z-index: 0;
-}
-.background-video {
-  z-index: 0;
-}
-#philosophy {
-  position: relative; /* KEY: gives falling leaves a reference */
-  overflow: hidden;   /* optional: hide leaves outside the section */
-}
-#visionmission{
-  position: relative; /* KEY: gives falling leaves a reference */
-  overflow: hidden; 
-}
-.falling-leaves {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none; /* So leaves don't interfere with clicks */
-  overflow: hidden;
-  z-index: 0; /* behind your text */
-}
+    .navbar-brand {
+      display: inline-block;
+      width: 120px;
+      /* set the desired width for the anchor */
+      height: 70px;
+      /* set the desired height for the anchor */
+      position: relative;
+      overflow: hidden;
+      /* ensures the image doesn't spill outside */
+    }
 
-.leaf {
-  position: absolute;
-  top: -50px;
-  font-size: 2rem;
-  animation-name: fall;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
+    .navbar-logo {
+      width: 110%;
+      height: 100%;
+      object-fit: contain;
+      /* scale the image to fit inside while maintaining aspect ratio */
+      display: block;
+    }
 
-.leaf:nth-child(1) {
-  left: 10%;
-  animation-duration: 8s;
-  animation-delay: 0s;
-}
-.leaf:nth-child(2) {
-  left: 30%;
-  animation-duration: 10s;
-  animation-delay: 2s;
-}
-.leaf:nth-child(3) {
-  left: 50%;
-  animation-duration: 7s;
-  animation-delay: 1s;
-}
-.leaf:nth-child(4) {
-  left: 70%;
-  animation-duration: 9s;
-  animation-delay: 3s;
-}
-.leaf:nth-child(5) {
-  left: 90%;
-  animation-duration: 11s;
-  animation-delay: 0.5s;
-}
+    .bg-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: opacity 1s ease-in-out;
+      opacity: 0;
+      z-index: 0;
+    }
 
-@keyframes fall {
-  0% {
-    transform: translateY(0) rotate(0deg);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(100vh) rotate(360deg);
-    opacity: 0;
-  }
-}
-.video-overlay {
-  background: rgba(0, 0, 0, 0.4); /* Adjust as needed for contrast */
-  z-index: 1;
-}
+    .background-video {
+      z-index: 0;
+    }
+
+    #philosophy {
+      position: relative;
+      /* KEY: gives falling leaves a reference */
+      overflow: hidden;
+      /* optional: hide leaves outside the section */
+    }
+
+    #visionmission {
+      position: relative;
+      /* KEY: gives falling leaves a reference */
+      overflow: hidden;
+    }
+    #day{
+       position: relative;
+      /* KEY: gives falling leaves a reference */
+      overflow: hidden;
+    }
+    .falling-leaves {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      /* So leaves don't interfere with clicks */
+      overflow: hidden;
+      z-index: 0;
+      /* behind your text */
+    }
+
+    .leaf {
+      position: absolute;
+      top: -50px;
+      font-size: 2rem;
+      animation-name: fall;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+    }
+
+    .leaf:nth-child(1) {
+      left: 10%;
+      animation-duration: 8s;
+      animation-delay: 0s;
+    }
+
+    .leaf:nth-child(2) {
+      left: 30%;
+      animation-duration: 10s;
+      animation-delay: 2s;
+    }
+
+    .leaf:nth-child(3) {
+      left: 50%;
+      animation-duration: 7s;
+      animation-delay: 1s;
+    }
+
+    .leaf:nth-child(4) {
+      left: 70%;
+      animation-duration: 9s;
+      animation-delay: 3s;
+    }
+
+    .leaf:nth-child(5) {
+      left: 90%;
+      animation-duration: 11s;
+      animation-delay: 0.5s;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+      }
+
+      100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    .video-overlay {
+      background: rgba(0, 0, 0, 0.4);
+      /* Adjust as needed for contrast */
+      z-index: 1;
+    }
+
     .hero-overlay {
-  background: radial-gradient(
-    circle,
-    rgba(0, 0, 0, 0.9) 0%,
-    rgba(0, 0, 0, 0.7) 20%,
-    rgba(0, 0, 0, 0.6) 40%,
-    rgba(0, 0, 0, 0.5) 60%,
-    rgba(0, 0, 0, 0.4) 80%,
-    rgba(0, 0, 0, 0.3) 90%,
-    rgba(0, 0, 0, 0) 100%
-  );
-  padding: 2rem;
-  z-index: 1;
-}
+      background: radial-gradient(circle,
+          rgba(0, 0, 0, 0.9) 0%,
+          rgba(0, 0, 0, 0.7) 20%,
+          rgba(0, 0, 0, 0.6) 40%,
+          rgba(0, 0, 0, 0.5) 60%,
+          rgba(0, 0, 0, 0.4) 80%,
+          rgba(0, 0, 0, 0.3) 90%,
+          rgba(0, 0, 0, 0) 100%);
+      padding: 2rem;
+      z-index: 1;
+    }
+
     .icon {
       font-size: 2rem;
     }
   </style>
 </head>
+
 <body>
   <audio id="background-music" autoplay loop>
     <source src="audio2.webm" type="audio/webm">
@@ -156,7 +192,7 @@
   <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <div class="container">
       <a class="navbar-brand" href="#">
-          <img src="poorna-removebg-preview.png" alt="Logo" class="navbar-logo">
+        <img src="poorna-removebg-preview.png" alt="Logo" class="navbar-logo">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
@@ -176,10 +212,10 @@
 
   <!-- Hero Section -->
   <section class="hero" id="home">
-     <div class="video-container">
-    <video class="bg-video" autoplay muted loop playsinline></video>
-    <video class="bg-video" autoplay muted loop playsinline></video>
-  </div>
+    <div class="video-container">
+      <video class="bg-video" autoplay muted loop playsinline></video>
+      <video class="bg-video" autoplay muted loop playsinline></video>
+    </div>
     <div class="hero-overlay">
       <h1 class="display-3 fw-bold">🌿 Poorna Tattva</h1>
       <p class="lead">Where the Five Elements Meet the First Lessons of Life</p>
@@ -199,17 +235,18 @@
     </div>
   </section> -->
   <section id="about" style="position: relative; overflow: hidden;">
-  <!-- Background video -->
-<!--   <video autoplay muted loop playsinline style="position: absolute; top: 50%; left: 50%; min-width: 100%; min-height: 100%; width: auto; height: auto; z-index: -1; transform: translate(-50%, -50%); object-fit: cover;">
+    <!-- Background video -->
+    <!--   <video autoplay muted loop playsinline style="position: absolute; top: 50%; left: 50%; min-width: 100%; min-height: 100%; width: auto; height: auto; z-index: -1; transform: translate(-50%, -50%); object-fit: cover;">
     <source src="nature3.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video> -->
- <video class="background-video position-absolute top-0 start-0 w-100 h-100 object-fit-cover" autoplay muted loop playsinline>
-    <source src="nature3.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-  <!-- Blurred text container -->
-  <div class="container text-center" style="position: relative; z-index: 1; background: radial-gradient(
+    <video class="background-video position-absolute top-0 start-0 w-100 h-100 object-fit-cover" autoplay muted loop
+      playsinline>
+      <source src="nature3.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <!-- Blurred text container -->
+    <div class="container text-center" style="position: relative; z-index: 1; background: radial-gradient(
     circle,
     rgba(0, 0, 0, 0.9) 0%,
     rgba(0, 0, 0, 0.7) 20%,
@@ -219,170 +256,185 @@
     rgba(0, 0, 0, 0.3) 90%,
     rgba(0, 0, 0, 0) 100%
   ); padding: 2rem; border-radius: 1rem;">
-    <h2 class="mb-4 text-white">Welcome to Poorna Tattva</h2>
-    <p class="lead mx-auto text-white" style="max-width: 800px;">
-      In the quiet rhythms of the earth and the laughter of little feet, there lies a space where learning is not rushed, but realized. At Poorna Tattva Play Home, education is life itself—unfolding gracefully like the petals of a lotus. Childhood here is not a phase to hurry, but a time to build a foundation deeply, joyfully, and meaningfully.
-    </p>
-  </div>
-</section>
-<section id="visionmission">
+      <h2 class="mb-4 text-white">Welcome to Poorna Tattva</h2>
+      <p class="lead mx-auto text-white" style="max-width: 800px;">
+        In the quiet rhythms of the earth and the laughter of little feet, there lies a space where learning is not
+        rushed, but realized. At Poorna Tattva Play Home, education is life itself—unfolding gracefully like the petals
+        of a lotus. Childhood here is not a phase to hurry, but a time to build a foundation deeply, joyfully, and
+        meaningfully.
+      </p>
+    </div>
+  </section>
+  <section id="visionmission">
     <div class="container text-center">
       <h2 class="mb-4">Vision</h2>
-     
-       <p class="lead mx-auto" style="max-width: 800px;">
-       To awaken the full potential of every child by nurturing their natural curiosity, cultural roots, and inner harmony—creating mindful individuals who live with purpose, compassion, and a deep connection to the world around them.
+
+      <p class="lead mx-auto" style="max-width: 800px;">
+        To awaken the full potential of every child by nurturing their natural curiosity, cultural roots, and inner
+        harmony—creating mindful individuals who live with purpose, compassion, and a deep connection to the world
+        around them.
 
       </p>
       <h2 class="mb-4">Mission</h2>
-     
-       <p class="lead mx-auto" style="max-width: 800px;">
-       To offer holistic, experiential learning rooted in nature, tradition, and creativity
 
-To integrate ancient wisdom with contemporary relevance through play, art, language, and community life
+      <p class="lead mx-auto" style="max-width: 800px;">
+        To offer holistic, experiential learning rooted in nature, tradition, and creativity
 
-To cultivate self-awareness, ecological sensitivity, and a lifelong love for learning in every child
+        To integrate ancient wisdom with contemporary relevance through play, art, language, and community life
+
+        To cultivate self-awareness, ecological sensitivity, and a lifelong love for learning in every child
       </p>
-     <div class="falling-leaves">
-      <div class="leaf">🍃</div>
-      <div class="leaf">🍃</div>
-      <div class="leaf">🍃</div>
-      <div class="leaf">🍃</div>
-      <div class="leaf">🍃</div>
-    </div>
+      <div class="falling-leaves">
+        <div class="leaf">🍃</div>
+        <div class="leaf">🍃</div>
+        <div class="leaf">🍃</div>
+        <div class="leaf">🍃</div>
+        <div class="leaf">🍃</div>
+      </div>
     </div>
   </section>
- <section id="philosophy">
+  <section id="philosophy">
     <div class="container text-center">
       <h2 class="mb-4">Philosophy</h2>
       <h2 class="text-center mb-5">Our Roots: Indian Philosophy. Our Wings: Innovation.</h2>
-       <p class="lead mx-auto" style="max-width: 800px;">
-       At Poorna Tattva, we believe that the early years are sacred—where a child’s worldview begins to form. Guided by the timeless wisdom of Indian philosophy, we honor each child as a unique spark of potential, unfolding at their own rhythm. Inspired by principles such as Ahimsa (non-violence), Samskara (values), and Sahaj (naturalness), our learning environment is nurturing, mindful, and deeply respectful of the child’s innate nature.
+      <p class="lead mx-auto" style="max-width: 800px;">
+        At Poorna Tattva, we believe that the early years are sacred—where a child’s worldview begins to form. Guided by
+        the timeless wisdom of Indian philosophy, we honor each child as a unique spark of potential, unfolding at their
+        own rhythm. Inspired by principles such as Ahimsa (non-violence), Samskara (values), and Sahaj (naturalness),
+        our learning environment is nurturing, mindful, and deeply respectful of the child’s innate nature.
 
-From these strong roots, we give our children wings to explore the world through creative play, storytelling, nature walks, music, and hands-on discovery. We blend ancient practices with modern pedagogical insights, creating a rich, stimulating space that fosters curiosity, confidence, and compassion.
+        From these strong roots, we give our children wings to explore the world through creative play, storytelling,
+        nature walks, music, and hands-on discovery. We blend ancient practices with modern pedagogical insights,
+        creating a rich, stimulating space that fosters curiosity, confidence, and compassion.
 
-Here, education is not rushed or forced—it is lived, experienced, and celebrated.
+        Here, education is not rushed or forced—it is lived, experienced, and celebrated.
       </p>
-     <div class="falling-leaves">
-      <div class="leaf">🍃</div>
-      <div class="leaf">🍃</div>
-      <div class="leaf">🍃</div>
-      <div class="leaf">🍃</div>
-      <div class="leaf">🍃</div>
-    </div>
+      <div class="falling-leaves">
+        <div class="leaf">🍃</div>
+        <div class="leaf">🍃</div>
+        <div class="leaf">🍃</div>
+        <div class="leaf">🍃</div>
+        <div class="leaf">🍃</div>
+      </div>
     </div>
   </section>
   <!-- Our Philosophy -->
   <section id="philosophyy">
     <div class="container">
-      
+
       <div class="row g-4 text-center">
-      
-         <div class="col-md-4 position-relative overflow-hidden">
-  <!-- Background Video -->
-  <video class="background-video position-absolute top-0 start-0 w-100 h-100 object-fit-cover" autoplay muted loop playsinline>
-    <source src="nature2.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
 
-  <!-- Optional overlay for readability -->
-  <div class="video-overlay position-absolute top-0 start-0 w-100 h-100"></div>
-
-  <div class="position-relative z-1 p-3"> <!-- Content wrapper to keep text above video -->
-    <div class="icon">🌍</div>
-    <h5 class="text-white">Prithvi (Earth)</h5>
-    <p class="text-white">Soil play, gardening, barefoot walks—where stability and sensory richness begin.</p>
-  </div>
-</div>
         <div class="col-md-4 position-relative overflow-hidden">
-  <!-- Background Video -->
-  <video class="background-video position-absolute top-0 start-0 w-100 h-100 object-fit-cover" autoplay muted loop playsinline>
-    <source src="water.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+          <!-- Background Video -->
+          <video class="background-video position-absolute top-0 start-0 w-100 h-100 object-fit-cover" autoplay muted
+            loop playsinline>
+            <source src="nature2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
 
-  <!-- Optional overlay for readability -->
-  <div class="video-overlay position-absolute top-0 start-0 w-100 h-100"></div>
+          <!-- Optional overlay for readability -->
+          <div class="video-overlay position-absolute top-0 start-0 w-100 h-100"></div>
 
-  <div class="position-relative z-1 p-3"> <!-- Content wrapper to keep text above video -->
-    <div class="icon">💧</div>
-    <h5 class="text-white">Apas (Water)</h5>
-    <p class="text-white">Fluid movement, water play—where emotions are explored with grace.</p>
-  </div>
-</div>
-<div class="col-md-4 position-relative overflow-hidden">
-  <!-- Background Video -->
-  <video class="background-video position-absolute top-0 start-0 w-100 h-100 object-fit-cover" autoplay muted loop playsinline>
-    <source src="fire.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+          <div class="position-relative z-1 p-3"> <!-- Content wrapper to keep text above video -->
+            <div class="icon">🌍</div>
+            <h5 class="text-white">Prithvi (Earth)</h5>
+            <p class="text-white">Soil play, gardening, barefoot walks—where stability and sensory richness begin.</p>
+          </div>
+        </div>
+        <div class="col-md-4 position-relative overflow-hidden">
+          <!-- Background Video -->
+          <video class="background-video position-absolute top-0 start-0 w-100 h-100 object-fit-cover" autoplay muted
+            loop playsinline>
+            <source src="water.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
 
-  <!-- Optional overlay for readability -->
-  <div class="video-overlay position-absolute top-0 start-0 w-100 h-100"></div>
+          <!-- Optional overlay for readability -->
+          <div class="video-overlay position-absolute top-0 start-0 w-100 h-100"></div>
 
-  <div class="position-relative z-1 p-3"> <!-- Content wrapper to keep text above video -->
-    <div class="icon">🔥</div>
-    <h5 class="text-white">Agni (Fire)</h5>
-    <p class="text-white">Storytelling, celebrations—where transformation and passion ignite</p>
-  </div>
-</div>
+          <div class="position-relative z-1 p-3"> <!-- Content wrapper to keep text above video -->
+            <div class="icon">💧</div>
+            <h5 class="text-white">Apas (Water)</h5>
+            <p class="text-white">Fluid movement, water play—where emotions are explored with grace.</p>
+          </div>
+        </div>
+        <div class="col-md-4 position-relative overflow-hidden">
+          <!-- Background Video -->
+          <video class="background-video position-absolute top-0 start-0 w-100 h-100 object-fit-cover" autoplay muted
+            loop playsinline>
+            <source src="fire.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+
+          <!-- Optional overlay for readability -->
+          <div class="video-overlay position-absolute top-0 start-0 w-100 h-100"></div>
+
+          <div class="position-relative z-1 p-3"> <!-- Content wrapper to keep text above video -->
+            <div class="icon">🔥</div>
+            <h5 class="text-white">Agni (Fire)</h5>
+            <p class="text-white">Storytelling, celebrations—where transformation and passion ignite</p>
+          </div>
+        </div>
         <!-- <div class="col-md-4">
           <div class="icon">💧</div>
           <h5>Apas (Water)</h5>
           <p>Fluid movement, water play—where emotions are explored with grace.</p>
         </div> -->
-        <div class ="col-md-2 position-relative overflow-hidden ">
-    
-</div>
-<div class="col-md-4 position-relative overflow-hidden">
-  <!-- Background Video -->
-  <video class="background-video position-absolute top-0 start-0 w-100 h-100 object-fit-cover" autoplay muted loop playsinline>
-    <source src="earth.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+        <div class="col-md-2 position-relative overflow-hidden ">
 
-  <!-- Optional overlay for readability -->
-  <div class="video-overlay position-absolute top-0 start-0 w-100 h-100"></div>
+        </div>
+        <div class="col-md-4 position-relative overflow-hidden">
+          <!-- Background Video -->
+          <video class="background-video position-absolute top-0 start-0 w-100 h-100 object-fit-cover" autoplay muted
+            loop playsinline>
+            <source src="earth.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
 
-  <div class="position-relative z-1 p-3"> <!-- Content wrapper to keep text above video -->
-    <div class="icon">🌬️</div>
-    <h5 class="text-white">Vayu (Air)</h5>
-    <p class="text-white">Silence, reflection, imagination—where wonder and self-awareness are born.</p>
-  </div>
-</div>
-<div class ="col-md-1 position-relative overflow-hidden ">
-    
-</div>
-<div class="col-md-4 position-relative overflow-hidden">
-  <!-- Background Video -->
-  <video class="background-video position-absolute top-0 start-0 w-100 h-100 object-fit-cover" autoplay muted loop playsinline>
-    <source src="space.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+          <!-- Optional overlay for readability -->
+          <div class="video-overlay position-absolute top-0 start-0 w-100 h-100"></div>
 
-  <!-- Optional overlay for readability -->
-  <div class="video-overlay position-absolute top-0 start-0 w-100 h-100"></div>
+          <div class="position-relative z-1 p-3"> <!-- Content wrapper to keep text above video -->
+            <div class="icon">🌬️</div>
+            <h5 class="text-white">Vayu (Air)</h5>
+            <p class="text-white">Silence, reflection, imagination—where wonder and self-awareness are born.</p>
+          </div>
+        </div>
+        <div class="col-md-1 position-relative overflow-hidden ">
 
-  <div class="position-relative z-1 p-3"> <!-- Content wrapper to keep text above video -->
-    <div class="icon">🌌</div>
-    <h5 class="text-white">Akasha (Space)</h5>
-    <p class="text-white">Silence, reflection, imagination—where wonder and self-awareness are born.</p>
-  </div>
-  
-</div>
-<div class ="col-md-1 position-relative overflow-hidden ">
-    
-</div>
-        
-    
-      <p class="lead text-center mt-4">These elements are life to be lived—our natural curriculum.</p>
-    </div>
+        </div>
+        <div class="col-md-4 position-relative overflow-hidden">
+          <!-- Background Video -->
+          <video class="background-video position-absolute top-0 start-0 w-100 h-100 object-fit-cover" autoplay muted
+            loop playsinline>
+            <source src="space.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+
+          <!-- Optional overlay for readability -->
+          <div class="video-overlay position-absolute top-0 start-0 w-100 h-100"></div>
+
+          <div class="position-relative z-1 p-3"> <!-- Content wrapper to keep text above video -->
+            <div class="icon">🌌</div>
+            <h5 class="text-white">Akasha (Space)</h5>
+            <p class="text-white">Silence, reflection, imagination—where wonder and self-awareness are born.</p>
+          </div>
+
+        </div>
+        <div class="col-md-1 position-relative overflow-hidden ">
+
+        </div>
+
+
+        <p class="lead text-center mt-4">These elements are life to be lived—our natural curriculum.</p>
+      </div>
   </section>
 
   <!-- Why Poorna Tattva -->
 
-   <section id="why">
+  <section id="why">
     <div class="container text-center">
-      <h2 class="mb-4">Why Poorna Tattva?</h2>
+      <h1 class="mb-4">Why Poorna Tattva?</h1>
       <ul class="list-unstyled lead mx-auto" style="max-width: 800px; text-align: left;">
         <li>🌳 We don’t see children as vessels to be filled, but flames to be kindled.</li>
         <li>🌳 At Poorna Tattva, ‘play’ is not a break from learning—it is the learning.</li>
@@ -392,83 +444,147 @@ Here, education is not rushed or forced—it is lived, experienced, and celebrat
     </div>
   </section>
 
-    <section id="why">
+  <section id="why">
     <div class="container text-center">
       <h1 class="mb-4">What makes Poorna Tattva Unique ?</h1>
-       <h2 class="mb-4">Learn the language of consciousness.</h2>
+      <h2 class="mb-4">Learn the language of consciousness.</h2>
       <p class="lead mx-auto" style="max-width: 800px;">
-      Children explore Sanskrit through conversation, chanting, and play, helping them improve memory, pronunciation, and clarity of thought
+        Children explore Sanskrit through conversation, chanting, and play, helping them improve memory, pronunciation,
+        and clarity of thought
       </p>
       <h2 class="mb-4">🎭 Puppetry 🎭</h2>
       <h3 class="mb-4">Imagination, storytelling, and cultural roots.</h3>
       <p class="lead mx-auto" style="max-width: 800px;">
-      With puppets, children bring stories to life, enhancing their communication, empathy, and creativity
+        With puppets, children bring stories to life, enhancing their communication, empathy, and creativity
       </p>
       <h2 class="mb-4">🌳 Nurturing the Nature 🌳</h2>
       <p class="lead mx-auto" style="max-width: 800px;">
-      Supports intellectual, emotional, physical, and spiritual development, Honors each child’s natural pace and learning style
+        Supports intellectual, emotional, physical, and spiritual development, Honors each child’s natural pace and
+        learning style
       </p>
-       <h2 class="mb-4">🧵 Loom (Cloth Weaving) 🧵</h2>
+      <h2 class="mb-4">🧵 Loom (Cloth Weaving) 🧵</h2>
       <p class="lead mx-auto" style="max-width: 800px;">
-      Build focus, coordination, and patience.
-Weaving introduces children to the art of rhythm, pattern, and touch. It helps improve fine motor skills, sequencing ability, and concentration
+        Build focus, coordination, and patience.
+        Weaving introduces children to the art of rhythm, pattern, and touch. It helps improve fine motor skills,
+        sequencing ability, and concentration
       </p>
-       <h2 class="mb-4">🚌 Beyond Classroom Walls 🚌</h2>
-       <h3 class="mb-4">Field trips</h3>
-       <h2 class="mb-4">🏛️ Heritage sites 🏛️</h2>
-         <p class="lead mx-auto" style="max-width: 800px;">
-Children explore ancient monuments, forts, and temples to connect with history, architecture, and storytelling. These visits deepen their sense of identity and cultural continuity.
-A visit to the zoo sparks wonder and curiosity as children observe animals up close in their naturalistic habitats. It nurtures empathy for living beings, strengthens ecological understanding, and brings science to life through real-world exploration.
+      <h2 class="mb-4">🚌 Beyond Classroom Walls 🚌</h2>
+      <h3 class="mb-4">Field trips</h3>
+      <h2 class="mb-4">🏛️ Heritage sites 🏛️</h2>
+      <p class="lead mx-auto" style="max-width: 800px;">
+        Children explore ancient monuments, forts, and temples to connect with history, architecture, and storytelling.
+        These visits deepen their sense of identity and cultural continuity.
+        A visit to the zoo sparks wonder and curiosity as children observe animals up close in their naturalistic
+        habitats. It nurtures empathy for living beings, strengthens ecological understanding, and brings science to
+        life through real-world exploration.
       </p>
-       <h2 class="mb-4">🌲🌳🍃 Forest Trails 🌲🌳🍃</h2>
-        <p class="lead mx-auto" style="max-width: 800px;">
-    Guided walks through forests and natural landscapes awaken curiosity, observation, and reverence for the earth. They help children understand ecosystems while grounding them in nature's rhythm.
-Neighbourhood exploration - Children walk through nearby markets, places of worship, and hospitals to understand how communities function. These visits build social awareness, empathy, and a sense of belonging by connecting learning to real-life environments.
+      <h2 class="mb-4">🌲🌳🍃 Forest Trails 🌲🌳🍃</h2>
+      <p class="lead mx-auto" style="max-width: 800px;">
+        Guided walks through forests and natural landscapes awaken curiosity, observation, and reverence for the earth.
+        They help children understand ecosystems while grounding them in nature's rhythm.
+        Neighbourhood exploration - Children walk through nearby markets, places of worship, and hospitals to understand
+        how communities function. These visits build social awareness, empathy, and a sense of belonging by connecting
+        learning to real-life environments.
       </p>
-       <h2 class="mb-4">🎭 Theatre Workshops 🎭</h2>
-        <p class="lead mx-auto" style="max-width: 800px;">
-Through roleplay, expression, and improvisation, children learn to articulate emotions, build confidence, and embody stories. Theatre fosters empathy, collaboration, and joyful communication.
- </p>
-  <h2 class="mb-4">🎵 Music Workshops 🎵</h2>
-        <p class="lead mx-auto" style="max-width: 800px;">
-Children immerse in the magic of melody, rhythm, and sound through playful singing, traditional instruments, and joyful listening. Music becomes a gateway to emotional harmony, creativity, and deep inner balance.
- </p>
-  <h2 class="mb-4">💃 Dance Workshops 💃</h2>
-        <p class="lead mx-auto" style="max-width: 800px;">
-Through graceful steps and joyful movement, children discover the power of expression and rhythm. Exploring classical and folk dances, they develop body awareness, confidence, and a deep connection to cultural roots.</p>
+      <h2 class="mb-4">🎭 Theatre Workshops 🎭</h2>
+      <p class="lead mx-auto" style="max-width: 800px;">
+        Through roleplay, expression, and improvisation, children learn to articulate emotions, build confidence, and
+        embody stories. Theatre fosters empathy, collaboration, and joyful communication.
+      </p>
+      <h2 class="mb-4">🎵 Music Workshops 🎵</h2>
+      <p class="lead mx-auto" style="max-width: 800px;">
+        Children immerse in the magic of melody, rhythm, and sound through playful singing, traditional instruments, and
+        joyful listening. Music becomes a gateway to emotional harmony, creativity, and deep inner balance.
+      </p>
+      <h2 class="mb-4">💃 Dance Workshops 💃</h2>
+      <p class="lead mx-auto" style="max-width: 800px;">
+        Through graceful steps and joyful movement, children discover the power of expression and rhythm. Exploring
+        classical and folk dances, they develop body awareness, confidence, and a deep connection to cultural roots.</p>
     </div>
   </section>
-  <!-- A Day at Poorna Tattva
+
   <section id="day">
     <div class="container text-center">
-      <h2 class="mb-4">A Day at Poorna Tattva</h2>
-      <ul class="list-unstyled lead mx-auto" style="max-width: 800px; text-align: left;">
-        <li>🧘 Sorting pebbles under a banyan tree to learn counting.</li>
-        <li>🦋 Observing a butterfly emerge to spark a science story.</li>
-        <li>🎭 Re-enacting village tales to understand history and community.</li>
-        <li>🎵 Singing folk songs and talking to elders to build language.</li>
+      <h1 class="mb-4">A Day at Poorna Tattva</h1>
+      <h3 class="mb-4">Unique Rhythms of the Day at Poorna Tattva </h3>
+      <ul class="list-unstyled lead mx-auto" style="max-width: 90%; text-align: center;">
+        <li style="margin-bottom: 1.5rem;">🧘 Mudra Moments 🧘 <br> Time to connect breath, body, and stillness through
+          gentle hand gestures. <br> </li>
+        <li style="margin-bottom: 1.5rem;">👨‍🍳 Little Chefs Hour 👨‍🍳 <br> Where tiny hands explore tastes, textures,
+          and the joy of cooking. <br></li>
+        <li style="margin-bottom: 1.5rem;">🧑‍🔬 Wonder Lab Time 🧑‍🔬 <br> Hands-on experiments that turn curiosity
+          into discovery. <br></li>
+        <li style="margin-bottom: 1.5rem;">💃 Rhythm & Movement Circle 💃 <br> Feel the beat, move with joy, and express
+          through sound and steps. <br> </li>
+        <li style="margin-bottom: 1.5rem;">🧘 Mindful Me Time 🧘 <br> Gentle pauses to breathe, reflect, and feel
+          centered. <br></li>
+        <li style="margin-bottom: 1.5rem;">🎨 Imagination Playground 🎨 <br> Unstructured time to play, build, and let
+          creativity flow freely. <br></li>
+        <li style="margin-bottom: 1.5rem;">🌳 Tale Time Under the Tree 🌳 <br> Stories that spark dreams and open
+          hearts. <br> </li>
+        <li style="margin-bottom: 1.5rem;">>☀️ Melody Mornings ☀️ <br> Singing, humming, and exploring the magic of
+          sound. <br> </li>
+        <li style="margin-bottom: 1.5rem;">🤸‍♂️ Flow & Frolic Time 🤸‍♂️ <br> Active play that nurtures the body and
+          social bonds. <br></li>
+        <li style="margin-bottom: 1.5rem;">🖌️ Color & Clay Time 🖌️ <br> Dive into art, textures, and endless forms of
+          self-expression. <br></li>
+
       </ul>
       <p class="mt-4">Every moment blends play, observation, art, and inquiry.</p>
+       <div class="falling-leaves">
+        <div class="leaf">🍃</div>
+        <div class="leaf">🍃</div>
+        <div class="leaf">🍃</div>
+        <div class="leaf">🍃</div>
+        <div class="leaf">🍃</div>
+      </div>
     </div>
-  </section> -->
+  </section>
 
-  
+
   <!-- Spaces of Wonder -->
   <section id="spaces">
     <div class="container text-center">
       <h2 class="mb-4">Spaces of Wonder</h2>
       <div class="row g-4">
-  
 
-<div class="col-md-4"><h5>Vanaspathi Sparsha</h5><p>Feel the healing touch of leaves and trees on your skin.</p></div>
-<div class="col-md-4"><h5>Katha Kuteera</h5><p>A cozy nook for tales that spark imagination and wisdom.</p></div>
-<div class="col-md-4"><h5>Mrittika</h5><p>Hands-on connection with the earth through clay and mud art.</p></div>
-<div class="col-md-4"><h5>Jala Kreeda</h5><p>Joyful water play that refreshes body and spirit alike.</p></div>
-<div class="col-md-4"><h5>Anveshana</h5><p>Adventures in exploration that awaken curiosity and wonder.</p></div>
-<div class="col-md-4"><h5>Kalpana Aalayam</h5><p>A sanctuary where dreams and creativity find their wings.</p></div>
-<div class="col-md-4"><h5>Swaraalay</h5><p>A musical space to discover the harmony of nature and sound.</p></div>
-<div class="col-md-4"><h5>Ahaara Vaatika</h5><p>A garden of edible delights that celebrates farm-to-table joy.</p></div>
-<div class="col-md-4"><h5>Rangavalli</h5><p>A vibrant ground for colorful patterns, festivals, and expression.</p></div>
+
+        <div class="col-md-4">
+          <h5>Vanaspathi Sparsha</h5>
+          <p>Feel the healing touch of leaves and trees on your skin.</p>
+        </div>
+        <div class="col-md-4">
+          <h5>Katha Kuteera</h5>
+          <p>A cozy nook for tales that spark imagination and wisdom.</p>
+        </div>
+        <div class="col-md-4">
+          <h5>Mrittika</h5>
+          <p>Hands-on connection with the earth through clay and mud art.</p>
+        </div>
+        <div class="col-md-4">
+          <h5>Jala Kreeda</h5>
+          <p>Joyful water play that refreshes body and spirit alike.</p>
+        </div>
+        <div class="col-md-4">
+          <h5>Anveshana</h5>
+          <p>Adventures in exploration that awaken curiosity and wonder.</p>
+        </div>
+        <div class="col-md-4">
+          <h5>Kalpana Aalayam</h5>
+          <p>A sanctuary where dreams and creativity find their wings.</p>
+        </div>
+        <div class="col-md-4">
+          <h5>Swaraalay</h5>
+          <p>A musical space to discover the harmony of nature and sound.</p>
+        </div>
+        <div class="col-md-4">
+          <h5>Ahaara Vaatika</h5>
+          <p>A garden of edible delights that celebrates farm-to-table joy.</p>
+        </div>
+        <div class="col-md-4">
+          <h5>Rangavalli</h5>
+          <p>A vibrant ground for colorful patterns, festivals, and expression.</p>
+        </div>
 
       </div>
     </div>
@@ -479,15 +595,19 @@ Through graceful steps and joyful movement, children discover the power of expre
     <div class="container text-center">
       <h2 class="mb-4">Join the Journey</h2>
       <p class="lead mx-auto" style="max-width: 800px;">
-        We invite parents who seek a holistic path, educators who want to teach from love, and communities who believe in childhood's power to heal and transform.
+        We invite parents who seek a holistic path, educators who want to teach from love, and communities who believe
+        in childhood's power to heal and transform.
       </p>
-      <p class="mt-4">📍 <strong>Visit Us:</strong>Aarogya Seva, 2nd Floor, 35 T Mariappa Rd, Ashoka Pillar, Jayanagar 1st Block, Bengaluru, Karnataka.</p>
+      <p class="mt-4">📍 <strong>Visit Us:</strong>Aarogya Seva, 2nd Floor, 35 T Mariappa Rd, Ashoka Pillar, Jayanagar
+        1st Block, Bengaluru, Karnataka.</p>
       <p>📧 <a href="mailto:poornatattva@gmail.com">poornatattva@gmail.com</a> | 📞 +91 94835 37697</p>
       <p>📅 <strong>Admissions Open:</strong> Schedule a walkthrough today.</p>
-      <a href="brochure.pdf" class="btn btn-primary btn-lg m-2" download="PoornaTattva_Brochure.pdf">Download Brochure</a>
-      <a href="admission_form.docx" class="btn btn-primary btn-lg m-1" download="PoornaTattva_Brochure.pdf">Download Admission Form</a>
+      <a href="brochure.pdf" class="btn btn-primary btn-lg m-2" download="PoornaTattva_Brochure.pdf">Download
+        Brochure</a>
+      <a href="admission_form.docx" class="btn btn-primary btn-lg m-1" download="PoornaTattva_Brochure.pdf">Download
+        Admission Form</a>
 
-     
+
     </div>
   </section>
 
@@ -511,7 +631,8 @@ Through graceful steps and joyful movement, children discover the power of expre
       </div>
     </div>
   </footer>
-<script src="script2.js"></script>
+  <script src="script2.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
