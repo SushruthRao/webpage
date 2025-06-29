@@ -34,7 +34,20 @@
   width: 100%; height: 100%;
   z-index: 0;
 }
+.navbar-brand {
+  display: inline-block;
+  width: 120px; /* set the desired width for the anchor */
+  height:70px; /* set the desired height for the anchor */
+  position: relative;
+  overflow: hidden; /* ensures the image doesn't spill outside */
+}
 
+.navbar-logo {
+  width: 110%;
+  height: 100%;
+  object-fit: contain; /* scale the image to fit inside while maintaining aspect ratio */
+  display: block;
+}
 .bg-video {
   position: absolute;
   top: 0; left: 0;
@@ -79,7 +92,9 @@
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="#">🌿 Poorna Tattva</a>
+      <a class="navbar-brand" href="#">
+          <img src="poorna-removebg-preview.png" alt="Logo" class="navbar-logo">
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
