@@ -1,6 +1,6 @@
   window.addEventListener('DOMContentLoaded', function() {
       var audio = document.getElementById('background-music');
-      audio.volume = 0.25; // set volume to 15%
+      audio.volume = 0.10; // set volume to 15%
     });
 document.addEventListener("DOMContentLoaded", () => {
   const videoUrls = [
