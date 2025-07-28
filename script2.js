@@ -8,7 +8,23 @@ document.addEventListener("DOMContentLoaded", () => {
     "vid3.mp4",       // Replace with your video 2
     "vid4.mp4"      // Replace with your video 3
   ];
+document.getElementById('why').addEventListener('click', function(e) {
+  // Prevent toggle if clicking inside the collapse content or on a link
+  if (!e.target.closest('.collapse, a')) {
+    var collapse = document.getElementById('whyPoornaCollapse');
+    var bsCollapse = bootstrap.Collapse.getOrCreateInstance(collapse);
+    bsCollapse.toggle();
+  }
+});
 
+
+document.getElementById('why-kids-kafe').addEventListener('click', function(e) {
+    if (!e.target.closest('.collapse, a')) {
+      var collapse = document.getElementById('kidsKafeCollapse');
+      var bsCollapse = bootstrap.Collapse.getOrCreateInstance(collapse);
+      bsCollapse.toggle();
+    }
+  });
   const videos = document.querySelectorAll(".bg-video");
   let current = 0;
   let next = 1;
