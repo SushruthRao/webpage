@@ -21,13 +21,13 @@ document.getElementById('why').addEventListener('click', function(e) {
 
 
 const galleryImages = [
-    './p_pics/1 (1).jpeg',
-    './p_pics/1 (2).jpeg',
-    './p_pics/1 (3).jpeg',
-    './p_pics/1 (4).jpeg',
-    './p_pics/1 (5).jpeg',
-    './p_pics/1 (6).jpeg',
-    './p_pics/1 (7).jpeg'
+    './1 (1).jpeg',
+    './1 (2).jpeg',
+    './1 (3).jpeg',
+    './1 (4).jpeg',
+    './1 (5).jpeg',
+    './1 (6).jpeg',
+    './1 (7).jpeg'
     
     // Add more URLs as needed
   ];
@@ -111,3 +111,4 @@ document.getElementById('why-kids-kafe').addEventListener('click', function(e) {
     }
   });
 });
+
