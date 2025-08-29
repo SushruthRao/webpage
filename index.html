@@ -66,6 +66,54 @@
       overflow: hidden;
       /* ensures the image doesn't spill outside */
     }
+    #gallery {
+  position: relative;
+  overflow: hidden;
+}
+#gallery .falling-leaves {
+  z-index: 2; /* Make sure it's above the gallery background */
+  pointer-events: none;
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+}
+    .gallery-scroll {
+    display: flex;
+    overflow-x: auto;
+    gap: 2rem;
+    padding: 2rem 0;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: rgb(255, 77, 0) ;
+  }
+  .gallery-scroll::-webkit-scrollbar {
+    height: 10px;
+    background:  rgb(255, 77, 0);
+  }
+  .gallery-scroll::-webkit-scrollbar-thumb {
+    background:  rgb(255, 77, 0);
+    border-radius: 5px;
+  }
+  .gallery-img {
+    flex: 0 0 auto;
+    width: 480px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 1rem;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+    opacity: 0.7;
+    transform: scale(0.95) rotate(-2deg);
+    transition: 
+      opacity 0.6s cubic-bezier(.4,0,.2,1),
+      transform 0.6s cubic-bezier(.4,0,.2,1),
+      box-shadow 0.6s cubic-bezier(.4,0,.2,1);
+    will-change: transform, opacity;
+  }
+  .gallery-img.in-view {
+    opacity: 1;
+    transform: scale(1.05) rotate(0deg);
+    box-shadow: 0 8px 32px rgba(191,167,111,0.25);
+    z-index: 2;
+  }
 
     .navbar-logo {
       width: 110%;
@@ -121,6 +169,17 @@
       /* KEY: gives falling leaves a reference */
       overflow: hidden;
     }
+    .navbar-nav .nav-link {
+  transition: color 0.3s;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+  color: rgb(255, 77, 0) !important;
+  /* No text-shadow */
+}
+
+
 
     .falling-leaves {
       position: absolute;
@@ -234,6 +293,7 @@
           <li class="nav-item"><a class="nav-link" href="#spaces">Spaces</a></li>
           <li class="nav-item"><a class="nav-link" href="#kids-kafe">Kids Kafe</a></li>
           <li class="nav-item"><a class="nav-link" href="#why-kids-kafe">Why Kids Kafe ?</a></li>
+          <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">Join</a></li>
         </ul>
       </div>
@@ -654,7 +714,23 @@
     </div>
   </section>
 
-
+  <section id="gallery" style="background: #f9f6f1;">
+    <div class="falling-leaves">
+    <div class="leaf">🍃</div>
+    <div class="leaf">🍃</div>
+    <div class="leaf">🍃</div>
+    <div class="leaf">🍃</div>
+    <div class="leaf">🍃</div>
+  </div>
+  <div class="container text-center mb-4">
+    <h1 class="mb-4"><b>Gallery</b></h1>
+    <div class="gallery-scroll" id="gallery-scroll">
+      <!-- Images will be injected here by JS -->
+    </div>
+    
+  </div>
+  
+</section>
   <section id="kids-kafe">
     <div class="container text-center">
       <h1 class="mb-4"><b>☕ Welcome to Kids Kafe</b></h1>
