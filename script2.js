@@ -18,6 +18,54 @@ document.getElementById('why').addEventListener('click', function(e) {
 });
 
 
+
+
+const galleryImages = [
+    './p_pics/1 (1).jpeg',
+    './p_pics/1 (2).jpeg',
+    './p_pics/1 (3).jpeg',
+    './p_pics/1 (4).jpeg',
+    './p_pics/1 (5).jpeg',
+    './p_pics/1 (6).jpeg',
+    './p_pics/1 (7).jpeg'
+    
+    // Add more URLs as needed
+  ];
+
+  // 2. Render images
+  const galleryScroll = document.getElementById('gallery-scroll');
+  galleryImages.forEach(src => {
+    const img = document.createElement('img');
+    img.src = src;
+    img.className = 'gallery-img';
+    img.alt = 'Gallery image';
+    galleryScroll.appendChild(img);
+  });
+
+  // 3. Animate images on scroll (Intersection Observer)
+  const observer = new window.IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+        } else {
+          entry.target.classList.remove('in-view');
+        }
+      });
+    },
+    { root: galleryScroll, threshold: 0.5 }
+  );
+  document.querySelectorAll('.gallery-img').forEach(img => observer.observe(img));
+
+
+
+
+
+
+
+
+
+
 document.getElementById('why-kids-kafe').addEventListener('click', function(e) {
     if (!e.target.closest('.collapse, a')) {
       var collapse = document.getElementById('kidsKafeCollapse');
